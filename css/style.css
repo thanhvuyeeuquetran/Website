@@ -1,0 +1,225 @@
+.body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.menu {
+  text-align: center; /* Để căn giữa nội dung menu */
+}
+
+ul.list_menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 60%;
+  border: 1px solid #000066;
+  margin: 0 auto;
+  line-height: 27px;
+}
+
+ul.list_menu li:hover {
+  background: burlywood;
+}
+
+ul.list_menu li a {
+  text-decoration: none;
+  text-align: center;
+  color: yellowgreen;
+}
+
+ul.list_menu li {
+  display: inline-block; /* Để menu nằm cạnh nhau */
+  margin: 7px;
+  padding: 5px;
+}
+#main {
+  display: flex;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  height: auto;
+  width: 100%;
+}
+.maincontent {
+  border: 1px solid saddlebrown;
+  height: auto;
+  width: 79%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+ul.product_list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Cho phép các sản phẩm tự động xuống dòng khi không đủ không gian */
+}
+ul.product_list li {
+  width: calc(
+    25% - 10px
+  ); /* Sử dụng calc để tính toán kích thước một cách tự động và trừ đi khoảng cách giữa các sản phẩm */
+  margin: 5px;
+  float: left;
+  box-sizing: border-box; /* Đảm bảo rằng kích thước bao gồm cả đường viền */
+  border: none;
+}
+
+ul.product_list li img {
+  width: 100%;
+}
+p.title_product {
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+}
+p.price_product {
+  text-align: center;
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+}
+.clear {
+  clear: both;
+}
+.sidebar {
+  width: 200px;
+  background-color: #333;
+  color: white;
+  padding: 20px; /* Thêm khoảng cách giữa nội dung và khung của sidebar */
+  border-right: 1px solid #666; /* Đường viền bên phải */
+}
+
+ul.side {
+  list-style: none;
+  padding: 0;
+}
+
+ul.side li {
+  margin-bottom: 10px; /* Khoảng cách giữa các mục trong danh sách */
+}
+
+ul.side li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.3s; /* Hiệu ứng hover */
+}
+
+ul.side li a:hover {
+  background-color: #666; /* Màu nền khi hover */
+}
+/**********************pictures ************************************************************/
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 0; /* Location of the box (no space at the top) */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 40%; /* Đặt giá trị này để làm cho hình ảnh nhỏ lại hơn */
+  max-width: 80px; /* Giữ nguyên max-width */
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%; /* Increase the width for a larger ad */
+  max-width: 100px; /* Increase the max-width for a larger ad */
+  text-align: center;
+  color: #333;
+  padding: 10px 0;
+  height: auto; /* Remove fixed height */
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #000;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+.back-to-home {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999; /* Giá trị z-index lớn hơn để đảm bảo hiển thị trên cùng */
+}
